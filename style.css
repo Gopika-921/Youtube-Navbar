@@ -1,0 +1,105 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:white;
+  height: 60px;
+  padding: 0 16px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: black;
+}
+
+.left .logo {
+  height: 75px;
+
+}
+.center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.center input {
+  flex: 1;
+  height: 36px;
+  border: none;
+  border-radius: 2px 0 0 2px;
+  padding: 0 10px;
+  background-color: #121212;
+  color: white;
+  border: 1px solid #303030;
+}
+.search-btn {
+  width: 50px;
+  height: 36px;
+  border: 1px solid #303030;
+  background-color: #222;
+  color: white;
+  border-radius: 0 2px 2px 0;
+}
+.mic-btn {
+  margin-left: 10px;
+  width: 40px;
+  height: 36px;
+  border: none;
+  background-color: #222;
+  border-radius: 50%;
+  color: white;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: black;
+}
+.create-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.icon-wrapper {
+  position: relative;
+}
+.notif-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
