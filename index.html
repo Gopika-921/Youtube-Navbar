@@ -1,36 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>YouTube Dark Navbar Clone</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Navbar Clone</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="youtube1.css">
 </head>
+
 <body>
-
-  <nav class="navbar">
-    <div class="left">
-      <i class="fas fa-bars"></i>
-      <img src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" class="logo" alt="YouTube">
-      
-
+  <div class="navbar">
+    <div class="nav-left">
+      <i class="fas fa-bars menu-icon"></i>
+      <div class="logo"><span><i class="f5ab fa-youtube"></i></span>YouTube <sup style="font-size:10px;">IN</sup></div>
     </div>
-
-    <div class="center">
-      <input type="text" placeholder="Search">
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search">
       <button class="search-btn"><i class="fas fa-search"></i></button>
       <button class="mic-btn"><i class="fas fa-microphone"></i></button>
     </div>
-
-    <div class="right">
+    <div class="nav-right">
       <button class="create-btn"><i class="fas fa-plus"></i> Create</button>
-      <div class="icon-wrapper">
-        <i class="fas fa-bell"></i>
-        <span class="notif-count"></span>
-      </div>
-      <img src="https://www.w3schools.com/howto/img_avatar.png" class="profile" alt="profile">
+      <i class="fas fa-bell"></i>
+      <img src="C:\Users\dgopi\OneDrive\Pictures\Screenshots\Snapchat-461821875.jpg" class="profile">
     </div>
-  </nav>
+  </div>
+  <div class="categories">
+    <div class="category active">All</div>
+    <div class="category">Music</div>
+    <div class="category">News</div>
+    <div class="category">Mixes</div>
+    <div class="category">Live</div>
+    <div class="category">Tamil television drama</div>
+    <div class="category">HTML</div>
+    <div class="category">Mantras</div>
+    <div class="category">Tamil Cinema</div>
+    <div class="category">Dramedy</div>
+    <div class="category">Ceremonies</div>
+    <div class="category">Comedy</div>
+    <div class="category">Cooking shows</div>
+  </div>
+
+  <div class="videos">
+    <div class="video-card">
+      <img src="C:\Users\dgopi\Downloads\istockphoto-1394440950-612x612.webp"alt="Video 1">
+      <h4>🌸Beautiful garden video|5 Garden Hacks You Must Try🌸</h4>
+      <p>Greenary• 2M views • 2 days ago</p>
+    </div>
+
+    <div class="video-card">
+      <img src="C:\Users\dgopi\Downloads\pexels-photo-1108099.webp" alt="Video 2">
+      <h4>My Puppy’s First Day at Home|Cutest Dog Moments You’ll Ever See🐶</h4>
+      <p>Pets • 5M views • 1 week ago</p>
+    </div>
+
+    <div class="video-card">
+      <img src="https://i.ytimg.com/vi/E7wJTI-1dvQ/maxresdefault.jpg" alt="Video 4">
+      <h4>Best Chill Music Mix 2025🎵|Heart-Touching Melody You Must Hear</h4>
+      <p>Live Music • 6.5M views • 5 days ago</p>
+    </div>
+
+    <div class="video-card">
+      <img src="C:\Users\dgopi\Downloads\maroon-5-1.webp" alt="Video 5">
+      <h4>Best Chill Music Mix 2025🎵|Heart-Touching Melody You Must Hear</h4>
+      <p>Live Music concert • 15M views • 1month ago</p>
+    </div>
+
+    <div class="video-card">
+      <img src="C:\Users\dgopi\Downloads\hq720.jpg" alt="Video 6">
+      <h4>HTML basics tutorial for beginners</h4>
+      <p>error makes clever • 7M views • 1 year ago</p>
+    </div>
+  </div>
+
+  <script>
+    const videos = [
+     
+      {
+        thumbnail: "https://i.ytimg.com/vi/fLexgOxsZu0/maxresdefault.jpg",
+        title: "My Puppy’s First Day at Home 🐶",
+        channel: "Pets",
+        views: "5M views",
+        date: "1 week ago"
+      },
+      {
+        thumbnail: "https://i.ytimg.com/vi/E7wJTI-1dvQ/maxresdefault.jpg",
+        title: "Best Chill Music Mix 2025 🎵",
+        channel: "Live Music",
+        views: "6.5M views",
+        date: "5 days ago"
+      },
+      {
+        thumbnail: "https://i.ytimg.com/vi/09R8_2nJtjg/maxresdefault.jpg",
+        title: "Maroon 5 Live Concert 2025 🎤",
+        channel: "Concerts",
+        views: "15M views",
+        date: "1 month ago"
+      },
+      {
+        thumbnail: "https://i.ytimg.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
+        title: "HTML Basics Tutorial for Beginners",
+        channel: "Error Makes Clever",
+        views: "7M views",
+        date: "1 year ago"
+      },
+      {
+        thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+        title: "Peaceful Waterfall Sounds 🌊 | Relaxing Nature",
+        channel: "Nature Vibes",
+        views: "3M views",
+        date: "3 weeks ago"
+      },
+      {
+        thumbnail: "https://i.ytimg.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
+        title: "Funny Cat Compilation 😂 | Try Not To Laugh",
+        channel: "Cat Lovers",
+        views: "12M views",
+        date: "6 months ago"
+      }
+    ];
+
+    const videoContainer = document.querySelector(".videos");
+    videos.forEach(video => {
+      const card = document.createElement("div");
+      card.classList.add("video-card");
+
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="Video Thumbnail">
+        <h4>${video.title}</h4>
+        <p>${video.channel} • ${video.views} • ${video.date}</p>
+      `;
+
+      videoContainer.appendChild(card);
+    });
+  </script>
 </body>
 </html>
